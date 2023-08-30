@@ -3,9 +3,9 @@ import { Outlet, Link } from 'react-router-dom';
 
 const Admins = () => {
   return (
-    <div>
+    <div className=''>
       <Link to={`/admins/add`}><button className=' bg-slate-700 text-white'>Add Admins</button></Link>
-      Admin
+      <p className=''>Admin</p>
 
       <Outlet/>
     </div>

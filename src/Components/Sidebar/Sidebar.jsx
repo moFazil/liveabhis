@@ -1,18 +1,22 @@
 import React from 'react'
 import logo from '../Sidebar/SidebarImages/empty.png';
 import { Link } from 'react-router-dom';
+import {FaHome,FaPhoneAlt,FaRegBuilding,FaUserPlus} from 'react-icons/fa';
+import{LuFileCheck2} from 'react-icons/lu';
+import {BiBook} from 'react-icons/bi';
 
 const Sidebar = () => {
   return (
-    <div >
-        <div className=' flex flex-col greenbg w-[15%] '>
+    <div className=''>
+        <div className=' greenbg flex flex-col w-[15%] py-5 absolute h-screen text-white text-lg'>
             <img src={logo} alt="Logo" className=' w-40 h-14'/>
-            <Link to={`/`}><p>Home</p></Link>
-            <Link to={`/institute`}><p>Institutes</p></Link>
-            <Link to={`/admins`}><p>Admins</p></Link>
-            <Link to={`/reports`}><p>Reports</p></Link>
-            <Link to={`/elibrary`}><p>E-Library</p></Link>
-            <Link to={`/support`}><p>Support</p></Link>
+            <p className=' w-full bg-white h-[1px] mt-4'></p>
+            <Link to={`/`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800] active:bg-[#FF9800]'><FaHome/>Home</p></Link>
+            <Link to={`/institute`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><FaRegBuilding/> Institutes</p></Link>
+            <Link to={`/admins`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><FaUserPlus/>Admins</p></Link>
+            <Link to={`/reports`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><LuFileCheck2/>Reports</p></Link>
+            <Link to={`/elibrary`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><BiBook/>E-Library</p></Link>
+            <Link to={`/support`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><FaPhoneAlt/> Support</p></Link>
         </div>
         
     </div>
