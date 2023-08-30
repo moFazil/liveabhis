@@ -6,9 +6,9 @@ const Footer = () => {
 
   return (
     <div>
-        <div className='flex justify-around'>
+        <div className='flex justify-around pl-24 absolute bottom-0 w-[100%] h-[2.5rem]'>
           
-            <p className='green'>V1.0.1 Copyright &copy; {year} Abhis </p>
+            <p className=' text-green'>V1.0.1 Copyright &copy; {year} Abhis </p>
             
             <div></div>
 
