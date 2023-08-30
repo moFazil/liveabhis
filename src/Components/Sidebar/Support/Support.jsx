@@ -3,10 +3,8 @@ import { Outlet } from 'react-router-dom';
 
 const Support = () => {
   return (
-    <div>
-      
+    <div> 
       Support
-
       <Outlet/>
     </div>
   )

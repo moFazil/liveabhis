@@ -9,6 +9,7 @@ const Sidebar = () => {
   return (
     <div className=''>
         <div className=' bg-greenbg flex flex-col w-[15%] py-5 absolute h-screen text-white text-lg'>
+
             <img src={logo} alt="Logo" className=' w-32 h-14'/>
             <p className=' w-full bg-white h-[1px] mt-4'></p>
             <Link to={`/`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><FaHome/>Home</p></Link>
