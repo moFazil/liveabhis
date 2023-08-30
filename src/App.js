@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
-// import Topbar from './Components/topbar/Topbar';
+import Header from './Components/Header/Header';
 import Home from './Components/Sidebar/Home/Home';
 import Institutes from './Components/Sidebar/Institutes/Institutes';
 import Admins from './Components/Sidebar/Admins/Admins';
@@ -13,6 +13,7 @@ import AdminsTable from './Components/Sidebar/Admins/AdminsTable';
 import ReportsTable from './Components/Sidebar/Reports/ReportsTable';
 import ELibraryTable from './Components/Sidebar/E-Library/ELibraryTable';
 import Footer from './Components/Footer/Footer';
+import MyprofileForm from './Components/Header/MyprofileForm';
 
 
 
@@ -20,7 +21,11 @@ function App() {
   return (
     <div className="App">
     <Sidebar/>
-    {/* <Topbar/> */}
+    <Header/>
+    <Routes>
+      <Route path='/form' element={<MyprofileForm/>}/>
+    </Routes>
+    
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/institute' element={<Institutes/>}>
