@@ -12,6 +12,7 @@ import InstituteTable from './Components/Sidebar/Institutes/InstituteTable';
 import AdminsTable from './Components/Sidebar/Admins/AdminsTable';
 import ReportsTable from './Components/Sidebar/Reports/ReportsTable';
 import ELibraryTable from './Components/Sidebar/E-Library/ELibraryTable';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/elibrary/add' element={<ELibraryTable/>}/>
       <Route path='/support' element={<Support/>}/>
     </Routes>
+    <Footer/>
     </div>
   );
 }

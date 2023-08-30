@@ -15,3 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.green{
+  color:#3A796E
+}
+.greenbg{
+  background-color: #105D50;
+}
+.yellow{
+  color:#FFD045
+}
+.yellow{
+  background-color: #FFD045;
+}
