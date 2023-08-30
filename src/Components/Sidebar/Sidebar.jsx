@@ -8,15 +8,15 @@ import {BiBook} from 'react-icons/bi';
 const Sidebar = () => {
   return (
     <div className=''>
-        <div className=' greenbg flex flex-col w-[15%] py-5 absolute h-screen text-white text-lg'>
-            <img src={logo} alt="Logo" className=' w-40 h-14'/>
+        <div className=' bg-greenbg flex flex-col w-[15%] py-5 absolute h-screen text-white text-lg'>
+            <img src={logo} alt="Logo" className=' w-32 h-14'/>
             <p className=' w-full bg-white h-[1px] mt-4'></p>
-            <Link to={`/`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800] active:bg-[#FF9800]'><FaHome/>Home</p></Link>
-            <Link to={`/institute`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><FaRegBuilding/> Institutes</p></Link>
-            <Link to={`/admins`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><FaUserPlus/>Admins</p></Link>
-            <Link to={`/reports`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><LuFileCheck2/>Reports</p></Link>
-            <Link to={`/elibrary`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><BiBook/>E-Library</p></Link>
-            <Link to={`/support`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-[#FF9800]'><FaPhoneAlt/> Support</p></Link>
+            <Link to={`/`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><FaHome/>Home</p></Link>
+            <Link to={`/institute`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><FaRegBuilding/> Institutes</p></Link>
+            <Link to={`/admins`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><FaUserPlus/>Admins</p></Link>
+            <Link to={`/reports`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><LuFileCheck2/>Reports</p></Link>
+            <Link to={`/elibrary`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><BiBook/>E-Library</p></Link>
+            <Link to={`/support`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow after:bg-yellowbg'><FaPhoneAlt/> Support</p></Link>
         </div>
         
     </div>
