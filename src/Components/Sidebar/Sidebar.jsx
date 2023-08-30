@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className=' flex flex-row '>
-        <div>
+    <div >
+        <div className=' flex flex-col greenbg w-[15%] '>
             <img src={logo} alt="Logo" className=' w-40 h-14'/>
             <Link to={`/`}><p>Home</p></Link>
             <Link to={`/institute`}><p>Institutes</p></Link>
