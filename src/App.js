@@ -14,6 +14,7 @@ import ReportsTable from './Components/Sidebar/Reports/ReportsTable';
 import ELibraryTable from './Components/Sidebar/E-Library/ELibraryTable';
 import Footer from './Components/Footer/Footer';
 import MyprofileForm from './Components/Header/MyprofileForm';
+import SupportTable from './Components/Sidebar/Support/SupportTable';
 
 
 
@@ -28,18 +29,19 @@ function App() {
     </Routes>
     
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/institute' element={<Institutes/>}>
-        <Route path='/institute/add' element={<InstituteTable/>}/>
+      <Route path='/'               element={<Home/>}/>
+      <Route path='/institute'      element={<Institutes/>}>
+       <Route path='/institute/add' element={<InstituteTable/>}/>
         </Route>
-      <Route path='/admins' element={<Admins/>}/>
-        <Route path='/admins/add' element={<AdminsTable/>}/>
+      <Route path='/admins'         element={<Admins/>}/>
+        <Route path='/admins/add'   element={<AdminsTable/>}/>
       
-      <Route path='/reports' element={<Reports/>}/>
-        <Route path='/reports/add' element={<ReportsTable/>}/>
-      <Route path='/elibrary' element={<ELibrary/>}/>
+      <Route path='/reports'        element={<Reports/>}/>
+        <Route path='/reports/add'  element={<ReportsTable/>}/>
+      <Route path='/elibrary'       element={<ELibrary/>}/>
         <Route path='/elibrary/add' element={<ELibraryTable/>}/>
-      <Route path='/support' element={<Support/>}/>
+      <Route path='/support'        element={<Support/>}/>
+        <Route path='/support/add'  element={<SupportTable/>}/>
     </Routes>
 
     <Footer/>
