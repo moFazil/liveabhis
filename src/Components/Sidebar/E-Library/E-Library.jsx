@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 const ELibrary = () => {
   return (
     <div>E-Library
-      <Link to={`/elibrary/add`}><button className=' bg-slate-700 text-white'>Add Resource</button></Link>
+      <Link to={`/elibrary/table`}><button className=' bg-slate-700 text-white'>Add Resource</button></Link>
 
       <Outlet/>
     </div>

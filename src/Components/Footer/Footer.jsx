@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <div>
-        <div className='flex justify-around pl-24 absolute bottom-0 w-[100%] h-[2.5rem]'>
+        <div className='flex justify-around pl-24 absolute bottom-0 w-[100%] h-[2.5rem] cursor-default'>
           
             <p className=' text-green'>V1.0.1 Copyright &copy; {year} Abhis </p>
             
@@ -14,7 +14,7 @@ const Footer = () => {
 
           <div className='flex justify-evenly'>
             <FaFacebook className='text-gray-900 text-2xl mx-3 hover:text-[#1877F2] cursor-pointer'/>
-            <FaInstagram className='text-gray-900 text-2xl mx-3 hover:text-[#e471c7] cursor-pointer'/>
+            <FaInstagram className='text-gray-900 text-2xl mx-3 hover:text-[#FF008C] cursor-pointer'/>
             <FaWhatsapp className='text-gray-900 text-2xl mx-3 hover:text-[#128c7e] cursor-pointer'/>
             <FaLinkedin className='text-gray-900 text-2xl mx-3 hover:text-[#0072b1] cursor-pointer'/>
           </div>

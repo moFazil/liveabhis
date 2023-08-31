@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 const Reports = () => {
   return (
     <div>Reports
-      <Link to={`/reports/add`}><button className=' bg-slate-700 text-white'>Add Reports</button></Link>
+      <Link to={`/reports/table`}><button className=' bg-slate-700 text-white'>Add Reports</button></Link>
 
       <Outlet/>
     </div>
