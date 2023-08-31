@@ -17,7 +17,7 @@ const Sidebar = () => {
             <Link to={`/admins`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><FaUserPlus/>Admins</p></Link>
             <Link to={`/reports`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><LuFileCheck2/>Reports</p></Link>
             <Link to={`/elibrary`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><BiBook/>E-Library</p></Link>
-            <Link to={`/support`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow after:bg-yellowbg'><FaPhoneAlt/> Support</p></Link>
+            <Link to={`/support`}><p className=' py-5 flex justify-start pl-3 items-center gap-2 hover:bg-yellow'><FaPhoneAlt/> Support</p></Link>
         </div>
         
     </div>
