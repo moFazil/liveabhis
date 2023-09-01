@@ -33,16 +33,16 @@ function App() {
     <Routes>
       <Route path='/'               element={<Home/>}/>
       <Route path='/institute'      element={<Institutes/>}/>
-       <Route path='/institute/add' element={<InstituteTable/>}/>
+       <Route path='/institute/table' element={<InstituteTable/>}/>
       <Route path='/admins'         element={<Admins/>}/>
-        <Route path='/admins/add'   element={<AdminsTable/>}/>
+        <Route path='/admins/table'   element={<AdminsTable/>}/>
       
       <Route path='/reports'        element={<Reports/>}/>
-        <Route path='/reports/add'  element={<ReportsTable/>}/>
+        <Route path='/reports/table'  element={<ReportsTable/>}/>
       <Route path='/elibrary'       element={<ELibrary/>}/>
-        <Route path='/elibrary/add' element={<ELibraryTable/>}/>
+        <Route path='/elibrary/table' element={<ELibraryTable/>}/>
       <Route path='/support'        element={<Support/>}/>
-        <Route path='/support/add'  element={<SupportTable/>}/>
+        <Route path='/support/table'  element={<SupportTable/>}/>
       <Route path='/' element={<Home/>}/>
       <Route path='/institute' element={<Institutes/>}/>
         <Route path='/institute/table' element={<InstituteTable/>}/>
