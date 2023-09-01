@@ -11,6 +11,12 @@ const InstituteTable = () => {
           color:'#fff', 
         }
       },
+      selectableRows:{
+        style:{
+        Color:'#105D50',
+      }
+
+      },
     }
 
   const columns = [
@@ -81,10 +87,10 @@ const InstituteTable = () => {
         mobilenumber : 9856487965,
         pointofcontact : "point of contact name",
         createdat : "created at",
-        vr : "VR",
+        vr : vrtoggle(),
         spaceused : "spaceused",
         diskspace : "diskspace",
-        status : "toggle",
+        status : ststoggle(),
         actions : "action"
       },
 
@@ -97,10 +103,10 @@ const InstituteTable = () => {
         mobilenumber : 9856487965,
         pointofcontact : "point of contact name",
         createdat : "created at",
-        vr : "VR",
+        vr : vrtoggle(),
         spaceused : "spaceused",
         diskspace : "diskspace",
-        status : "toggle",
+        status : ststoggle(),
         actions : "action"
       }
   ]
@@ -114,13 +120,32 @@ const InstituteTable = () => {
     setRecords(newData)
   }
 
+  function ststoggle() {
+    return (
+      <label className="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" className="sr-only peer" />
+        <div className="w-11 h-6 peer-focus:outline-none rounded-full peer dark:bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-greenbg"></div>
+      </label>
+    );
+  }
+
+function vrtoggle() {
+  return (
+    <label className="relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" className="sr-only peer" />
+      <div className="w-11 h-6 peer-focus:outline-none rounded-full peer dark:bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#5BC236]"></div>
+    </label>
+  );
+}
+
+
 return (
 
   <div style={{width:'75%',transform:'translateY(15%)',translate:'25%'}}>
       
       <div className='overflow-x-auto max-w-full'> 
       <div className=' text-end'>
-      <input type="text" placeholder='Search' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
+      <input type="text" placeholder='Search Institute Name' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
       <button className='bg-greenbg p-3 px-9 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Search</button>
       <Link to={`/institute/form`}><button className='bg-greenbg p-3 px-4 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Add Institute</button></Link>
 
@@ -133,7 +158,6 @@ return (
           fixedHeader
           pagination
           customStyles={customStyle}
-          
           />
       
       </div>
