@@ -113,7 +113,6 @@ const SupportTable = () => {
             fixedHeader
             pagination
             customStyles={customStyle}
-            
             />
         
         </div>
