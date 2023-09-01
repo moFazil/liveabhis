@@ -10,4 +10,4 @@ const InstituteForm = () => {
   )
 }
 
-export default InstituteForm
+export default InstituteForm;
