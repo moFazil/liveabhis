@@ -32,9 +32,15 @@ const AdminsTable = () => {
     },
     {
       name:"Status",
+      selector: row=> row.status,
+      sortable:true,
+      
     },
     {
       name:"Actions",
+      selector: row=> row.actions,
+      sortable:true,
+      
     },
   ]
 
@@ -44,12 +50,14 @@ const AdminsTable = () => {
       name:"YourName",
       email:"Mail Id",
       mobileNo:908263892,
+      status:ststoggle()
     },
     {
       id:2,
       name:"Your Name",
       email:"Mail Id",
       mobileNo:908263892,
+      status:ststoggle()
     }
   ]
 const[records,setRecords]=useState(data);
@@ -59,6 +67,15 @@ function handleFilter(event){
     return row.name.toLowerCase().includes(event.target.value.toLowerCase())
   })
   setRecords(newData)
+}
+
+function ststoggle() {
+  return (
+    <label className="relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" className="sr-only peer" />
+      <div className="w-11 h-6 peer-focus:outline-none rounded-full peer dark:bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-greenbg"></div>
+    </label>
+  );
 }
 
   return (
