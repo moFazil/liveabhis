@@ -102,7 +102,7 @@ const SupportTable = () => {
         
         <div className='overflow-x-auto max-w-full'> 
         <div className=' text-end'>
-        <input type="text" placeholder='Search' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
+        <input type="text" placeholder='Search Name' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
         <button className=' bg-greenbg p-3 px-9 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Search</button>
         </div>
 

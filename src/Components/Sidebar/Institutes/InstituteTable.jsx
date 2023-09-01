@@ -11,6 +11,12 @@ const InstituteTable = () => {
           color:'#fff', 
         }
       },
+      selectableRows:{
+        style:{
+        Color:'#105D50',
+      }
+
+      },
     }
 
   const columns = [
@@ -84,7 +90,7 @@ const InstituteTable = () => {
         vr : "VR",
         spaceused : "spaceused",
         diskspace : "diskspace",
-        status : "toggle",
+        status : toggle(),
         actions : "action"
       },
 
@@ -100,7 +106,7 @@ const InstituteTable = () => {
         vr : "VR",
         spaceused : "spaceused",
         diskspace : "diskspace",
-        status : "toggle",
+        status : toggle(),
         actions : "action"
       }
   ]
@@ -109,9 +115,18 @@ const InstituteTable = () => {
 
   function handleFilter(event){
     const newData = data.filter(row=>{
-      return row.name.toLowerCase().includes(event.target.value.toLowerCase())
+      return row.institutename.toLowerCase().includes(event.target.value.toLowerCase())
     })
     setRecords(newData)
+  }
+
+  function toggle() {
+    return (
+      <label className="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" className="sr-only peer" />
+        <div className="w-11 h-6 peer-focus:outline-none rounded-full peer dark:bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-greenbg"></div>
+      </label>
+    );
   }
 
 return (
@@ -120,7 +135,7 @@ return (
       
       <div className='overflow-x-auto max-w-full'> 
       <div className=' text-end'>
-      <input type="text" placeholder='Search' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
+      <input type="text" placeholder='Search Institute Name' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
       <button className='bg-greenbg p-3 px-9 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Search</button>
       <button className='bg-greenbg p-3 px-4 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Add Institutes</button>
 
@@ -133,7 +148,6 @@ return (
           fixedHeader
           pagination
           customStyles={customStyle}
-          
           />
       
       </div>
