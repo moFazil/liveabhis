@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import DataTable from 'react-data-table-component'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const InstituteTable = () => {
 
@@ -109,7 +109,7 @@ const InstituteTable = () => {
 
   function handleFilter(event){
     const newData = data.filter(row=>{
-      return row.name.toLowerCase().includes(event.target.value.toLowerCase())
+      return row.institutename.toLowerCase().includes(event.target.value.toLowerCase())
     })
     setRecords(newData)
   }
@@ -122,7 +122,7 @@ return (
       <div className=' text-end'>
       <input type="text" placeholder='Search' className='bg-gray-100 w-64 px-3 p-3 my-5 border-none outline-none rounded-md text-sm hover:bg-gray-200' onChange={handleFilter}/>
       <button className='bg-greenbg p-3 px-9 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Search</button>
-      <button className='bg-greenbg p-3 px-4 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Add Institutes</button>
+      <Link to={`/institute/form`}><button className='bg-greenbg p-3 px-4 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Add Institute</button></Link>
 
       </div>
 

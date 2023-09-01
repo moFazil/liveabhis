@@ -3,11 +3,6 @@ import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Header from './Components/Header/Header';
 import Home from './Components/Sidebar/Home/Home';
-import Institutes from './Components/Sidebar/Institutes/Institutes';
-import Admins from './Components/Sidebar/Admins/Admins';
-import Reports from './Components/Sidebar/Reports/Reports';
-import ELibrary from './Components/Sidebar/E-Library/E-Library';
-import Support from './Components/Sidebar/Support/Support';
 import InstituteTable from './Components/Sidebar/Institutes/InstituteTable';
 import AdminsTable from './Components/Sidebar/Admins/AdminsTable';
 import ReportsTable from './Components/Sidebar/Reports/ReportsTable';
@@ -16,6 +11,9 @@ import Footer from './Components/Footer/Footer';
 import MyprofileForm from './Components/Header/MyprofileForm';
 import SupportTable from './Components/Sidebar/Support/SupportTable';
 import AdminForm from './Components/Sidebar/Admins/AdminForm';
+import ELibraryForm from './Components/Sidebar/E-Library/ELibraryForm';
+import InstituteForm from './Components/Sidebar/Institutes/InstituteForm';
+
 
 
 
@@ -24,40 +22,20 @@ function App() {
   return (
     <div className="App">
     <Sidebar/>
-    <Header/>
+    <Header/>   
     
     <Routes>
-      <Route path='/form' element={<MyprofileForm/>}/>
+    <Route path='/form'                element={<MyprofileForm/>}/>
+      <Route path='/'                  element={<Home/>}/>
+      <Route path='/institute'         element={<InstituteTable/>}/>
+      <Route path='/institute/form'    element={<InstituteForm/>}/>
+      <Route path='/admins'            element={<AdminsTable/>}/>
+      <Route path='/admins/form'       element={<AdminForm/>}/>
+      <Route path='/reports'           element={<ReportsTable/>}/>
+      <Route path='/elibrary'          element={<ELibraryTable/>}/>
+         <Route path='/elibrary/form'  element={<ELibraryForm/>}/>
+      <Route path='/support'           element={<SupportTable/>}/>
     </Routes>
-    
-    <Routes>
-      <Route path='/'               element={<Home/>}/>
-      <Route path='/institute'      element={<Institutes/>}/>
-       <Route path='/institute/table' element={<InstituteTable/>}/>
-      <Route path='/admins'         element={<Admins/>}/>
-        <Route path='/admins/table'   element={<AdminsTable/>}/>
-      
-      <Route path='/reports'        element={<Reports/>}/>
-        <Route path='/reports/table'  element={<ReportsTable/>}/>
-      <Route path='/elibrary'       element={<ELibrary/>}/>
-        <Route path='/elibrary/table' element={<ELibraryTable/>}/>
-      <Route path='/support'        element={<Support/>}/>
-        <Route path='/support/table'  element={<SupportTable/>}/>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/institute' element={<Institutes/>}/>
-        <Route path='/institute/table' element={<InstituteTable/>}/>
-
-      <Route path='/admins' element={<Admins/>}/>
-        <Route path='/admins/table' element={<AdminsTable/>}/>
-        <Route path='/admins/form' element={<AdminForm/>}/>
-      
-      <Route path='/reports' element={<Reports/>}/>
-        <Route path='/reports/table' element={<ReportsTable/>}/>
-      <Route path='/elibrary' element={<ELibrary/>}/>
-        <Route path='/elibrary/table' element={<ELibraryTable/>}/>
-      <Route path='/support' element={<Support/>}/>
-    </Routes>
-
     <Footer/>
     </div>
   );

@@ -64,7 +64,7 @@ function handleFilter(event){
 }
 
   return (
-    <div style={{width:'70%',transform:'translateY(50%)',translate:'30%',}} >
+    <div style={{width:'70%',transform:'translateY(15%)',translate:'30%',}} >
       <div className=' text-end'>
       <input type="text" placeholder='Search' className='bg-gray-100 w-64 px-3 p-3 my-5 rounded-md text-sm hover:bg-gray-200 border-none outline-none' onChange={handleFilter}/>
         <button className=' bg-greenbg p-3 px-9 rounded-md mx-2 text-sm text-white hover:bg-yellow'>Search</button>
