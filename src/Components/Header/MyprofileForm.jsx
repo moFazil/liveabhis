@@ -7,8 +7,6 @@ const MyprofileForm = () => {
         
     <input type="file" name="pfp" accept="image/*" className='rounded-full my-3 h-36 w-36 text-transparent bg-transparent bg-opacity-0 object-none border-greenbg border-2 cursor-pointer' />
 
-    
-
     <form>  
     <div className='grid grid-cols-2'>
     
@@ -24,10 +22,7 @@ const MyprofileForm = () => {
 
       </div>
 
-
-    </form>
-   
-
+    </form>   
 
   <Outlet/>
 
