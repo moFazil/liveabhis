@@ -15,9 +15,6 @@ import ELibraryForm from './Components/Sidebar/E-Library/ELibraryForm';
 import InstituteForm from './Components/Sidebar/Institutes/InstituteForm';
 
 
-
-
-
 function App() {
   return (
     <div className="App">
