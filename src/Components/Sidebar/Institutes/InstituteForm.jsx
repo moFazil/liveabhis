@@ -160,7 +160,7 @@ const InstituteForm = () => {
 
       <input type="text" placeholder='District' required className='p-5 bg-gray-100 border-greenbg border-2 w-full h-2 my-2 mx-5 rounded-md'/>
 
-      <div className='h-10 mt-2 ml-8 rounded-lg flex justify-around items-center'>
+      <div className='h-10 w-full mt-2 ml-8 rounded-lg flex justify-around items-center border-[2px] border-greenbg'>
 
         <p>branches</p>
       
@@ -177,7 +177,7 @@ const InstituteForm = () => {
       
       </div>
       
-      <div className='h-10 mt-2 ml-8 rounded-lg flex justify-around items-center'>
+      <div className='h-10 w-full mt-2 ml-2 rounded-lg flex justify-around items-center border-[2px] border-greenbg'>
 
         <p>students</p>
       
@@ -194,7 +194,7 @@ const InstituteForm = () => {
       
       </div>
       
-      <div className='h-10 mt-2 ml-8 rounded-lg flex justify-around items-center'>
+      <div className='h-10 w-full mt-2 ml-5 rounded-lg flex justify-around items-center border-[2px] border-greenbg'>
 
         <p>faculty</p>
       
@@ -211,7 +211,7 @@ const InstituteForm = () => {
       
       </div>
 
-      <div className='h-10 mt-2 ml-8 rounded-lg flex justify-around items-center'>
+      <div className='h-10 w-full mt-2 ml-8 rounded-lg flex justify-around items-center border-[2px] border-greenbg'>
 
         <p>cloud</p>
       
@@ -253,6 +253,5 @@ const InstituteForm = () => {
     </div>
   )
 }
-
 
 export default InstituteForm

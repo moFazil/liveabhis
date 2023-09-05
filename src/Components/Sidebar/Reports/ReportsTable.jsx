@@ -1,10 +1,8 @@
 import React, {useState} from 'react'
 import Select from 'react-select';
-import Calendar from 'react-calendar';
 import { Outlet } from 'react-router-dom';
 
 const ReportsTable = () => {
-
     
   const optionsadmin = [
 
@@ -27,7 +25,6 @@ const ReportsTable = () => {
 
   const placeholderinstitute = 'Institute Type';
 
-  
   const optionsbranch = [
 
     { label: 'School' },
@@ -37,37 +34,6 @@ const ReportsTable = () => {
   ];
 
   const placeholderbranch = 'Branch Type';
-
-  const [showFromCalendar, setShowFromCalendar] = useState(false);
-  const [selectedFromDate, setSelectedFromDate] = useState(new Date());
-  const [showToCalendar, setShowToCalendar] = useState(false);
-  const [selectedToDate, setSelectedToDate] = useState(new Date());
-
-  const handleOpenFromCalendar = () => {
-    setShowFromCalendar(true);
-  };
-
-  const handleOpenToCalendar = () => {
-    setShowToCalendar(true);
-  };
-
-  const handleCloseFromCalendar = () => {
-    setShowFromCalendar(false);
-  };
-
-  const handleCloseToCalendar = () => {
-    setShowToCalendar(false);
-  };
-
-  const handleSelectFromDate = () => {
-    //onSelect(selectedFromDate);
-    handleCloseFromCalendar();
-  };
-
-  const handleSelectToDate = () => {
-    //onSelect(selectedToDate);
-    handleCloseToCalendar();
-  };
   
   const [activecount, setactivecount] = useState(0);
   const [dormantcount, setdormantcount] = useState(0);
@@ -150,10 +116,9 @@ const ReportsTable = () => {
   }
   };
 
-
   return (
    
-    <div className='absolute flex justify-center left-[5%] translate-y-[50%] overflow-y-scroll rounded-lg w-full px-64'>
+    <div className='absolute flex justify-center left-[5%] translate-y-[30%] overflow-y-scroll rounded-lg w-full px-64'>
 
     <div className='grid grid-cols-2'>
       
@@ -178,51 +143,18 @@ const ReportsTable = () => {
         />
       </div>
 
-      <div className='py-3 mx-5'>
-      <button onClick={handleOpenFromCalendar}> From </button>
-      {showFromCalendar && (
-
-        <div>
-
-          <Calendar
-            onChange={setSelectedFromDate}
-            value={selectedFromDate}
-          />
-
-        <div className=' w-64'>
-          <button onClick={handleCloseFromCalendar} className=' text-lg font-semibold text-greenbg px-5'>Cancel</button>
-          <button onClick={handleSelectFromDate} className=' text-lg font-semibold text-greenbg px-5'>OK</button>
-        </div>
-
-        </div>
-
-        )}
-
-      </div>
-      
-      <div className=' border-greenbg py-3 mx-2'>
-      <button onClick={handleOpenToCalendar}> To </button>
-      {showToCalendar && (
-
-        <div>
-
-          <Calendar
-            onChange={setSelectedToDate}
-            value={selectedToDate}
-          />
-          
-        <div className=' w-64'>
-          <button onClick={handleCloseToCalendar} className=' text-lg font-semibold text-greenbg px-5'>Cancel</button>
-          <button onClick={handleSelectToDate} className=' text-lg font-semibold text-greenbg px-5'>OK</button>
-        </div>
-
-        </div>
-
-        )}
-
+      <div className='flex justify-around mt-3 ml-5 h-[68%] w-full border-[2px] border-greenbg rounded-md'>
+        <frameElement className='pt-3 pb-5 text-greenbg font-medium'>From</frameElement>
+      <input type='date'/>
       </div>
 
-      <div className='py-3 mx-5 px-2'>
+      <div className='flex justify-around ml-2 h-[78%] w-full border-[2px] border-greenbg rounded-md'>
+        <frameElement className=' pt-2 pb-6 text-greenbg font-medium'>To</frameElement>
+      <input type='date'/>
+      </div>
+
+
+      <div className='flex justify-around items-center h-[78%] mx-5 w-full border-[2px] border-greenbg rounded-md'>
 
       <frameElement className="mx-3">List account that uses VR</frameElement>
 
@@ -232,7 +164,7 @@ const ReportsTable = () => {
       </label>
       </div>  
         
-      <div className='py-3 mx-2 px-2'>
+      <div className='flex justify-around items-center h-[78%] mx-2 w-full border-[2px] border-greenbg rounded-md'>
 
       <frameElement className="mx-3">List accounts that have branches</frameElement>
 
@@ -242,7 +174,7 @@ const ReportsTable = () => {
       </label>
       </div>  
       
-      <div className='h-10 mt-2 mx-2 rounded-lg flex justify-around items-center'>
+      <div className='flex justify-around items-center h-[78%] mx-5 w-full border-[2px] border-greenbg rounded-md'>
 
         <p>Highest active accounts</p>
       
@@ -259,7 +191,7 @@ const ReportsTable = () => {
       
       </div>
 
-      <div className='h-10 mt-2 mx-2 rounded-lg flex justify-around items-center'>
+      <div className='flex justify-around items-center h-[78%] mx-2 w-full border-[2px] border-greenbg rounded-md'>
 
         <p>Dormant accounts</p>
       
@@ -276,7 +208,7 @@ const ReportsTable = () => {
       
       </div>
         
-      <div className='h-10 mt-2 mx-2 rounded-lg flex justify-around items-center'>
+      <div className='flex justify-around items-center h-[78%] mx-5 w-full border-[2px] border-greenbg rounded-md'>
 
         <p>Bandwidth consumption</p>
       
@@ -293,7 +225,7 @@ const ReportsTable = () => {
       
       </div>
               
-      <div className='h-10 mt-2 mx-2 rounded-lg flex justify-around items-center'>
+      <div className='flex justify-around items-center h-[78%] mx-2 w-full border-[2px] border-greenbg rounded-md'>
 
         <p>Disk Usage</p>
       
@@ -312,7 +244,7 @@ const ReportsTable = () => {
 
       <div></div>
 
-      <div className='flex justify-center my-3'>
+      <div className='flex justify-center my-3 w-[140%]'>
         <button className='p-2 bg-greenbg text-white border-greenbg border-2 w-[50%] my-2 mx-2 translate-x-[50%] rounded-md border-none outline-none hover:bg-yellow'>Generate</button> 
         <button className='p-2 bg-greenbg text-white border-greenbg border-2 w-[50%] my-2 mx-2 translate-x-[50%] rounded-md border-none outline-none hover:bg-yellow'>Reset</button> 
       </div>
